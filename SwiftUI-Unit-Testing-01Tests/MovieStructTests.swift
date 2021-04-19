@@ -26,7 +26,7 @@ class MovieStructTests: XCTestCase {
      * Business Rule: Each Movie has
      *  required "title" string property
      *  optional "releaseDate" string property (default value: nil)
-     *  required "shown" bool property (default value: false)
+     *  optional "shown" bool property (default value: false)
      */
     
     // Test a Movie with a required title property
