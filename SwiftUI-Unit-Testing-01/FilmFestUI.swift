@@ -13,9 +13,9 @@ struct FilmFestUI: View {
     
     public init() {
         movie_store = MovieDataRepository()
-//        movie_store.add( movie: Movie(title: "Teen Comedy", releaseDate: "2015"))
-//        movie_store.add( movie: Movie(title: "Dark Comedy", releaseDate: "2016"))
-//        movie_store.add( movie: Movie(title: "Comedy", releaseDate: "2017"))
+        movie_store.add( movie: Movie(title: "Teen Comedy", releaseDate: "2015"))
+        movie_store.add( movie: Movie(title: "Dark Comedy", releaseDate: "2016"))
+        movie_store.add( movie: Movie(title: "Comedy", releaseDate: "2017"))
     }
     
     var body: some View {
@@ -26,9 +26,9 @@ struct FilmFestUI: View {
             VStack {
                 Text("Film Fest")
                             .font(.title)
-//                List(movie_store.getAllMovies()) { movie in
-//                        Text( movie.title)
-//                }
+                List(movie_store.getAllMovies()) { movie in
+                        Text( movie.title)
+                }
             }
         }
   
