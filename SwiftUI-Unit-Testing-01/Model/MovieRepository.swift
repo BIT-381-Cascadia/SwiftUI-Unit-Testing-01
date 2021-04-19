@@ -12,21 +12,23 @@ public protocol MovieRepository {
      var count:Int { get }
      func add(movie: Movie)
      func get( identifier:Int ) -> Movie?
-//     func getAllMovies() -> [Movie]
+     func getAllMovies() -> [Movie]
     
 }
 
 //TODO : Be sure the repo conforms to the MovieRepository protocol
 public class MovieDataRepository:MovieRepository{
+    
+    private var movieData = [Movie]()
+    
     public func get(identifier: Int) -> Movie? {
         return movieData[ identifier]
     }
     
-//    public func getAllMovies() -> [Movie] {
-//        <#code#>
-//    }
+    public func getAllMovies() -> [Movie] {
+        return movieData
+    }
     
-    private var movieData = [Movie]()
     
     public func add (movie: Movie){
         movieData.append(movie)
